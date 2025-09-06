@@ -1,0 +1,12 @@
+{
+  "name": "order-api-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "typescript": "^5.0.0",
+    "sqlite3": "^5.1.2"
+  }
+}

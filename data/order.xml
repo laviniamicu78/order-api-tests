@@ -1,0 +1,9 @@
+<order>
+  <userId>1</userId>
+  <products>
+    <product>
+      <id>1</id>
+      <quantity>2</quantity>
+    </product>
+  </products>
+</order>
