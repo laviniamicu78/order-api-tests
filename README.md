@@ -1,3 +1,5 @@
+NL
+
 # Order API Test Project (Playwright + TypeScript)
 Dit mini-project is specifiek gericht op vacatures waarbij kennis van API-, keten- en backendtesten, 
 CI/CD, en ervaring met JSON/XML en SQL essentieel zijn.
@@ -34,8 +36,7 @@ npx playwright --version
 •	Playwright Test for VSCode
 •	ESLint
 •	Prettier
-________________________________________
- Controleren van de installatie
+
 
 Controleer of alles werkt:
 node -v          # Node.js versie
@@ -62,6 +63,7 @@ npx playwright install --with-deps
     Run alle tests:
 npx playwright test
 -----------------------------
+EN
 
 # Order API Test Project (Playwright + TypeScript)
 This mini-project is specifically aimed at roles that require knowledge of API, end-to-end, and backend testing, CI/CD, and experience with JSON/XML and SQL.
@@ -109,14 +111,14 @@ In VS Code:
 Go to View → Extensions → Installed and confirm that all extensions are active.
 
 Project Structure
-├── tests/                 # Test files: Order creation tests
-├── data/                  # JSON & XML test data
-├── sql/                   # SQL queries for simulations
-├── azure-pipelines.yml    # CI/CD configuration for Azure DevOps
-├── playwright.config.ts   # Playwright base settings
-├── package.json           # NPM dependencies and scripts
-├── tsconfig.json          # TypeScript configuration
-└── README.md              # Project description and user instructions
+├── tests/                # Test files: Order creation tests
+├── data/                 # JSON & XML test data
+├── sql/                  # SQL queries for simulations
+├── azure-pipelines.yml   # CI/CD configuration for Azure DevOps
+├── playwright.config.ts  # Playwright base settings
+├── package.json          # NPM dependencies and scripts
+├── tsconfig.json         # TypeScript configuration
+└── README.md             # Project description and user instructions
 
 Running the tests
 
