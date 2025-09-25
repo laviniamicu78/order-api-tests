@@ -3,7 +3,7 @@
   <products>
     <product>
       <id>1</id>
-      <quantity>2</quantity>
+      <quantity>4</quantity>
     </product>
   </products>
 </order>
