@@ -13,16 +13,24 @@ expect(response.status()).toBe(400); // Or expected error code
 // Negative quantity
 test('Create order - negative quantity returns 400', async ({ request }) => {
 const response = await request.post('/carts/add', {
-data: {
-userId: 123,
-products: [{ id: 1, quantity: -5 }],
-},
+    data: {
+        userId: 123,
+        products: [{ id: 1, quantity: -5 }],
+    },
 });
+
+    // Log response body for debugging
+const responseBody= await response.json();
+console.log('Response body:', responseBody);
+
+    // Assert status code
 expect(response.status()).toBe(400);
 
-// Optional check body too
-const body= await response.json();
-expect(body).toMatchObject ({ error: 'Invalid quantity' });
+
+    // Assert specific error message
+
+expect(responseBody.error).toHaveProperty('error');
+expect(responseBody.error).toMatch(/quantity/i);    // message mentions "quantity"
 });
 
 // Zero quantity

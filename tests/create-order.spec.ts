@@ -4,7 +4,7 @@ test('Create order - API test', async ({ request }) => {
   const response = await request.post('/carts/add', {
     data: {
       userId: 1,
-      products: [{ id: 1, quantity: 2 }]
+      products: [{ id: 1, quantity: 4 }]
     },
   });
 
@@ -13,5 +13,5 @@ test('Create order - API test', async ({ request }) => {
   console.log(body);
   expect(body.total).toBeGreaterThan(0);
   expect(body.totalProducts).toBe(1);
-  expect(body.totalQuantity).toBe(2);
+  expect(body.totalQuantity).toBe(4);
 });
