@@ -2,7 +2,8 @@
   "name": "order-api-tests",
   "version": "1.0.0",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "playwright test",
+    "test:ci": "playwright test --reporter=junit, html"
   },
   "devDependencies": {
     "@playwright/test": "^1.43.1",
