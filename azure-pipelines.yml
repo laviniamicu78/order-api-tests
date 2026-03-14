@@ -23,5 +23,21 @@ steps:
   - script: npx playwright install --with-deps
     displayName: 'Install Playwright browsers'
 
-  - script: npm test
+  # Run Playwright tests with JUnit + HTML report
+  - script: npx playwright test --reporter=junit,html
     displayName: 'Run tests'
+
+  # Publish test results to Azure DevOps
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'test-results/*.xml'
+      failTaskOnFailedTests: true
+    displayName: 'Publish Test Results'
+
+  # Upload Playwright HTML report
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: playwright-report
+      artifact: playwright-report
+    displayName: 'Publish Playwright HTML Report'
