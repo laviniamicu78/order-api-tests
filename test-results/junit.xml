@@ -1,0 +1,87 @@
+<testsuites id="" name="" tests="4" failures="3" skipped="0" errors="0" time="7.5807139999999995">
+<testsuite name="tests\negative-tests.spec.ts" timestamp="2026-03-14T10:49:30.407Z" hostname="" tests="4" failures="3" skipped="0" time="1.063" errors="0">
+<testcase name="Create order - missing userId returns 400" classname="tests\negative-tests.spec.ts" time="0.338">
+</testcase>
+<testcase name="Create order - negative quantity returns 400" classname="tests\negative-tests.spec.ts" time="0.152">
+<failure message="negative-tests.spec.ts:14:5 Create order - negative quantity returns 400" type="FAILURE">
+<![CDATA[  tests\negative-tests.spec.ts:14:5 › Create order - negative quantity returns 400 ─────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 400
+    Received: 201
+
+      25 |
+      26 |     // Assert status code
+    > 27 | expect(response.status()).toBe(400);
+         |                           ^
+      28 |
+      29 |
+      30 |     // Assert specific error message
+        at C:\order-api-tests\tests\negative-tests.spec.ts:27:27
+]]>
+</failure>
+<system-out>
+<![CDATA[Response body: {
+  id: [33m51[39m,
+  products: [
+    {
+      id: [33m1[39m,
+      title: [32m'Essence Mascara Lash Princess'[39m,
+      price: [33m9.99[39m,
+      quantity: [33m-5[39m,
+      total: [33m-49.95[39m,
+      discountPercentage: [33m10.48[39m,
+      discountedPrice: [33m-45[39m,
+      thumbnail: [32m'https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp'[39m
+    }
+  ],
+  total: [33m-49.95[39m,
+  discountedTotal: [33m-45[39m,
+  userId: [33m123[39m,
+  totalProducts: [33m1[39m,
+  totalQuantity: [33m-5[39m
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Create order - zero quantity returns 400" classname="tests\negative-tests.spec.ts" time="0.233">
+<failure message="negative-tests.spec.ts:37:5 Create order - zero quantity returns 400" type="FAILURE">
+<![CDATA[  tests\negative-tests.spec.ts:37:5 › Create order - zero quantity returns 400 ─────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 400
+    Received: 201
+
+      42 | },
+      43 | });
+    > 44 | expect(response.status()).toBe(400);
+         |                           ^
+      45 | });
+      46 |
+      47 | // Invalid product ID
+        at C:\order-api-tests\tests\negative-tests.spec.ts:44:27
+]]>
+</failure>
+</testcase>
+<testcase name="Create order - invalid product ID returns 400" classname="tests\negative-tests.spec.ts" time="0.34">
+<failure message="negative-tests.spec.ts:48:5 Create order - invalid product ID returns 400" type="FAILURE">
+<![CDATA[  tests\negative-tests.spec.ts:48:5 › Create order - invalid product ID returns 400 ────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 400
+    Received: 201
+
+      53 | },
+      54 | });
+    > 55 | expect(response.status()).toBe(400);
+         |                           ^
+      56 | });
+        at C:\order-api-tests\tests\negative-tests.spec.ts:55:27
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
